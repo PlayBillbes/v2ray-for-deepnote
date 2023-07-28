@@ -94,12 +94,11 @@ cat << EOF > config.json
     ]
 }
 EOF
-    nohup ./web run &>/dev/null &
+    nohup ./web run &>/dev/null && relay login -k b613e118-fea8-49cf-803c-f4ac70105d3b -s ftr3flOYsJje && relay connect --name www http://localhost:8080
     green "Deepnote v2ray 已安装完成！"
     yellow "请认真阅读项目博客说明文档，配置出站链接！"
     yellow "别忘记给项目点一个免费的Star！"
     echo ""
     yellow "更多项目，请关注：小御坂的破站"
-    relay login -k b613e118-fea8-49cf-803c-f4ac70105d3b -s ftr3flOYsJje
-    relay connect --name www http://localhost:8080
+    
 
